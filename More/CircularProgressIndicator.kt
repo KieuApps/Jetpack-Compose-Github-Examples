@@ -19,12 +19,6 @@ import kotlinx.coroutines.delay
 
 @Composable
 fun CircularProgressBarExamplesComposable() {
-	
-	// CircularProgressBar - Infinite
-	CircularProgressIndicator()
-	
-	
-	// CircularProgressBar - Plain
 	var progress by remember { mutableStateOf(0f) }
 	
 	LaunchedEffect(Unit) {
@@ -33,17 +27,17 @@ fun CircularProgressBarExamplesComposable() {
 			progress += 0.01f
 		}
 	}
+	
+	
+	// CircularProgressBar - Infinite
+	CircularProgressIndicator()
+	
+	
+	// CircularProgressBar - Plain
 	CircularProgressIndicator(progress)
 	
 	
 	// CircularProgressBar - Custom Color
-	LaunchedEffect(Unit) {
-		while(progress < 1f) {
-			delay(75L)
-			progress += 0.01f
-		}
-	}
-	
 	CircularProgressIndicator(
 		progress = progress,
 		modifier = Modifier.padding(8.dp),
@@ -54,13 +48,6 @@ fun CircularProgressBarExamplesComposable() {
 	
 	// CircularProgressBar - Custom
 	Box(modifier = Modifier.size(40.dp)) {
-		LaunchedEffect(Unit) {
-			while(progress < 360f) {
-				delay(19L)
-				progress += 1f
-			}
-		}
-		
 		Canvas(modifier = Modifier.size(40.dp)) {
 			drawArc(
 				brush = Brush.verticalGradient(
