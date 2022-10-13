@@ -38,10 +38,9 @@ fun TabsExamplesComposable() {
 		Page("Menu", Icons.Default.MoreVert),
 	)
 	
-	// ScrollableTabRow - Tab, Icon
+	// ScrollableTabRow - Tab, Icon Only
 	ScrollableTabRow(
-		selectedTabIndex = currentPage,
-		modifier = Modifier.fillMaxWidth(0.9f)
+		selectedTabIndex = currentPage
 	) {
 		pages.forEachIndexed { index, page ->
 			Tab(
@@ -55,8 +54,7 @@ fun TabsExamplesComposable() {
 	
 	// ScrollableTabRow - LeadingIconTab, Plain
 	ScrollableTabRow(
-		selectedTabIndex = currentPage,
-		modifier = Modifier.fillMaxWidth(0.9f)
+		selectedTabIndex = currentPage
 	) {
 		pages.forEachIndexed { index, page ->
 			LeadingIconTab(
@@ -69,10 +67,9 @@ fun TabsExamplesComposable() {
 		}
 	}
 	
-	// ScrollableTabRow - Tab, Text
+	// ScrollableTabRow - Tab, Text Only
 	ScrollableTabRow(
-		selectedTabIndex = currentPage,
-		modifier = Modifier.fillMaxWidth(0.9f)
+		selectedTabIndex = currentPage
 	) {
 		pages.forEachIndexed { index, page ->
 			Tab(
@@ -86,8 +83,7 @@ fun TabsExamplesComposable() {
 	
 	// ScrollableTabRow - Tab, Plain
 	ScrollableTabRow(
-		selectedTabIndex = currentPage,
-		modifier = Modifier.fillMaxWidth(0.9f)
+		selectedTabIndex = currentPage
 	) {
 		pages.forEachIndexed { index, page ->
 			Tab(
