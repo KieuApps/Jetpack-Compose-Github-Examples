@@ -1,4 +1,3 @@
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.BottomAppBar
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
@@ -13,7 +12,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 
 @Composable
@@ -31,7 +29,7 @@ fun BottomAppBarExamplesComposable() {
 	)
 	
 	// BottomAppBar - Plain
-	BottomAppBar(Modifier.fillMaxWidth(0.8f)) {
+	BottomAppBar {
 		pages.forEachIndexed { index, page ->
 			BottomNavigationItem(
 				selected = currentPage == index,
@@ -43,7 +41,7 @@ fun BottomAppBarExamplesComposable() {
 	}
 	
 	// BottomAppBar - Always Show Label
-	BottomAppBar(Modifier.fillMaxWidth(0.8f)) {
+	BottomAppBar {
 		pages.forEachIndexed { index, page ->
 			BottomNavigationItem(
 				selected = currentPage == index,
@@ -58,8 +56,7 @@ fun BottomAppBarExamplesComposable() {
 	// BottomAppBar - Custom Color
 	BottomAppBar(
 		backgroundColor = MaterialTheme.colors.secondary,
-		contentColor = MaterialTheme.colors.onSecondary,
-		modifier = Modifier.fillMaxWidth(0.8f)
+		contentColor = MaterialTheme.colors.onSecondary
 	) {
 		pages.forEachIndexed { index, page ->
 			BottomNavigationItem(
