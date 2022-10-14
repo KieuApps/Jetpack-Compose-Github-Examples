@@ -18,7 +18,8 @@ import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 
 @Composable
-fun CircularProgressBarExamplesComposable() {
+fun CircularProgressBarExamples() {
+	
 	var progress by remember { mutableStateOf(0f) }
 	
 	LaunchedEffect(Unit) {
