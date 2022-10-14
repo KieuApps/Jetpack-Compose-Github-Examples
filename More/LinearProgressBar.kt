@@ -16,6 +16,7 @@ import kotlinx.coroutines.delay
 
 @Composable
 fun LinearProgressBarExamplesComposable() {
+	
 	var progress by remember { mutableStateOf(0f) }
 	
 	LaunchedEffect(Unit) {
@@ -29,6 +30,7 @@ fun LinearProgressBarExamplesComposable() {
 	// LinearProgressBar - Plain
 	LinearProgressIndicator(progress)
 	
+	
 	// LinearProgressBar - Custom Shape
 	LinearProgressIndicator(
 		progress = progress,
@@ -36,6 +38,7 @@ fun LinearProgressBarExamplesComposable() {
 			.height(16.dp)
 			.clip(CircleShape)
 	)
+	
 	
 	// LinearProgressBar - Custom Shape
 	LinearProgressIndicator(
