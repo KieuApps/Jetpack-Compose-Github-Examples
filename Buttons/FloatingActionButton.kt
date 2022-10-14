@@ -5,7 +5,7 @@ import androidx.compose.material.icons.filled.Email
 import androidx.compose.runtime.Composable
 
 @Composable
-fun FloatingActionButtonExamplesComposable() {
+fun FloatingActionButtonExamples() {
 	FloatingActionButton(
 		onClick = { /* TODO */ }
 	) {
