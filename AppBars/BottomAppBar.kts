@@ -25,7 +25,7 @@ fun BottomAppBarExamplesComposable() {
 	val pages = listOf(
 		Page("Contacts", Icons.Default.Person),
 		Page("Home", Icons.Default.Home),
-		Page("Notifications", Icons.Default.Notifications)
+		Page("Alerts", Icons.Default.Notifications)
 	)
 	
 	// BottomAppBar - Plain
