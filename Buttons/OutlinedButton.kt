@@ -9,9 +9,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun OutlinedButtonExamplesComposable() {
+fun OutlinedButtonExamples() {
+	
 	val contentColor = MaterialTheme.colors.onBackground
 	
+	// OutlinedButton - Plain
 	OutlinedButton(
 		onClick = { /* TODO */ },
 		shape = CircleShape,
