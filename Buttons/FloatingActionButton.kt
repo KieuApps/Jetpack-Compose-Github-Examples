@@ -6,6 +6,8 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun FloatingActionButtonExamples() {
+	
+	// FloatingActionButton - Plain
 	FloatingActionButton(
 		onClick = { /* TODO */ }
 	) {
