@@ -16,11 +16,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 
 @Composable
-fun IconToggleButtonExamplesComposable() {
+fun IconToggleButtonExamples() {
+	
 	var checked by rememberSaveable { mutableStateOf(false) }
 	val likeIcon =
 		if(checked) Icons.Filled.ThumbUp
 		else Icons.Outlined.ThumbUp
+	
 	
 	// IconToggleButton - Plain
 	IconToggleButton(
@@ -29,6 +31,7 @@ fun IconToggleButtonExamplesComposable() {
 	) {
 		Icon(likeIcon, "Like")
 	}
+	
 	
 	// IconToggleButton - Custom Color
 	IconToggleButton(
