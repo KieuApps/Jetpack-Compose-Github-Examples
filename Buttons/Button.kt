@@ -18,13 +18,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ButtonExamplesComposable() {
+fun ButtonExamples() {
 	
 	// Button - Plain
-	Button(onClick = { /* TODO */ }
+	Button(
+		onClick = { /* TODO */ }
 	) {
 		Text("Button")
 	}
+	
 	
 	// Button - Rounded
 	Button(
@@ -34,19 +36,23 @@ fun ButtonExamplesComposable() {
 		Text("Rounded Button")
 	}
 	
+	
 	// Button - Border
 	Button(
 		onClick = { /* TODO */ },
 		border = BorderStroke(
 			width = 2.dp,
 			brush = Brush.verticalGradient(
-				listOf(Color(0xFF9DCEF5),
-					Color(0xFF4596D6))
+				listOf(
+					Color(0xFF9DCEF5),
+					Color(0xFF4596D6)
+				)
 			)
 		)
 	) {
 		Text("Button")
 	}
+	
 	
 	// Button - Custom Colors
 	val enabled = remember { mutableStateOf(true) }
@@ -75,6 +81,7 @@ fun ButtonExamplesComposable() {
 		
 		Text(if(enabled.value) "Button is enabled" else "Disabled")
 	}
+	
 	
 	// Button - Icon
 	Button(
