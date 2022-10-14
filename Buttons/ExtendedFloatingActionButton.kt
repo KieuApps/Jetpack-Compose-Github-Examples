@@ -6,7 +6,9 @@ import androidx.compose.material.icons.filled.Share
 import androidx.compose.runtime.Composable
 
 @Composable
-fun ExtendedFloatingActionButtonExamplesComposable() {
+fun ExtendedFloatingActionButtonExamples() {
+	
+	// ExtendedFloatingActionButton - Plain
 	ExtendedFloatingActionButton(
 		text = { Text("Share") },
 		onClick = { /* TODO */ },
