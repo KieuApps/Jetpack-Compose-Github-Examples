@@ -37,7 +37,6 @@ fun BadgedBoxExamples() {
 			modifier = Modifier.padding(16.dp),
 			badge = {
 				
-				
 				// Badge - Plain
 				Badge(
 					backgroundColor = if(notificationCount >= 1)
