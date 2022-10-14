@@ -15,13 +15,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun RowExamplesComposable() {
+fun RowExamples() {
 	
 	// Row - Centered
 	Row(
 		modifier = Modifier
 			.fillMaxWidth()
-			.padding(vertical = 50.dp),
+			.height(150.dp),
 		horizontalArrangement = Arrangement.Center,
 		verticalAlignment = Alignment.CenterVertically
 	) {
@@ -34,7 +34,7 @@ fun RowExamplesComposable() {
 	Row(
 		modifier = Modifier
 			.fillMaxWidth()
-			.padding(vertical = 50.dp),
+			.height(150.dp),
 		horizontalArrangement = Arrangement.Start,
 		verticalAlignment = Alignment.Top
 	) {
@@ -47,7 +47,7 @@ fun RowExamplesComposable() {
 	Row(
 		modifier = Modifier
 			.fillMaxWidth()
-			.padding(vertical = 50.dp),
+			.height(150.dp),
 		horizontalArrangement = Arrangement.End,
 		verticalAlignment = Alignment.Bottom
 	) {
