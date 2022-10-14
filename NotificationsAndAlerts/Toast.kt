@@ -4,7 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 @Composable
-fun ToastExamplesComposable() {
+fun ToastExamples() {
+	
 	val context = LocalContext.current
 	
 	// Toast - Short
@@ -20,6 +21,7 @@ fun ToastExamplesComposable() {
 		Text("Make Toast")
 	}
 	
+	
 	// Toast - Long
 	Button(
 		onClick = {
@@ -30,6 +32,6 @@ fun ToastExamplesComposable() {
 			).show()
 		}
 	) {
-		Text("Make Toast")
+		Text("Make Toast (long)")
 	}
 }
