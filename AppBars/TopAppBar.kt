@@ -44,7 +44,7 @@ fun TopAppBarExamplesComposable() {
 		},
 		actions = {
 			IconButton(onClick = { /* TODO */ }) {
-				Icon(Icons.Outlined.Notifications, "Notifications")
+				Icon(Icons.Outlined.Notifications, "Alerts")
 			}
 			IconButton(onClick = { /* TODO */ }) {
 				Icon(Icons.Default.Settings, "Settings")
