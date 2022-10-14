@@ -18,7 +18,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun BadgedBoxExamplesComposable() {
+fun BadgedBoxExamples() {
+	
 	var notificationCount by rememberSaveable { mutableStateOf(0) }
 	val badgeText = notificationCount.toString()
 	
@@ -29,9 +30,15 @@ fun BadgedBoxExamplesComposable() {
 		}) {
 			Text("Add one")
 		}
+		
+		
+		// BadgedBox - Plain
 		BadgedBox(
 			modifier = Modifier.padding(16.dp),
 			badge = {
+				
+				
+				// Badge - Plain
 				Badge(
 					backgroundColor = if(notificationCount >= 1)
 						MaterialTheme.colors.error
