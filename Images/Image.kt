@@ -19,7 +19,8 @@ fun ImageExampleComposable() {
 	// Image - Plain
 		Image(
 			painterResource(R.drawable.ic_launcher_foreground),
-			contentDescription = "Android"
+			contentDescription = "Android",
+			colorFilter = ColorFilter.tint(color = MaterialTheme.colors.onBackground)
 		)
 	
 	// Image - Zoomable
@@ -40,7 +41,10 @@ fun ImageExampleComposable() {
 			.graphicsLayer(
 				scaleX = maxOf(0.5f, minOf(5f, scale.value)),
 				scaleY = maxOf(0.5f, minOf(5f, scale.value))
-			)
+			),
+		colorFilter = ColorFilter.tint(
+			color = MaterialTheme.colors.onBackground
+		)
 	)
 	
 	// Image - Zoomable Box
@@ -65,7 +69,8 @@ fun ImageExampleComposable() {
 				.graphicsLayer(
 					scaleX = maxOf(0.5f, minOf(5f, scale2.value)),
 					scaleY = maxOf(0.5f, minOf(5f, scale2.value))
-				)
+				),
+			colorFilter = ColorFilter.tint(color = MaterialTheme.colors.onBackground)
 		)
 	}
 	
@@ -89,7 +94,8 @@ fun ImageExampleComposable() {
 			.graphicsLayer(
 				translationX = offsetX.value,
 				translationY = offsetY.value
-			)
+			),
+		colorFilter = ColorFilter.tint(color = MaterialTheme.colors.onBackground)
 	)
 	
 	// Image - Rotatable
@@ -107,6 +113,7 @@ fun ImageExampleComposable() {
 					angle.value += rotation
 				}
 			}
-			.graphicsLayer(rotationZ = angle.value)
+			.graphicsLayer(rotationZ = angle.value),
+		colorFilter = ColorFilter.tint(color = MaterialTheme.colors.onBackground)
 	)
 }
