@@ -3,14 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.DEVELOPER_NAME.APP_NAME">
 
-    <!--    ADD THE BELOW -->
+    <!--    ADD THIS -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <!--    ADD THE ABOVE -->
+
     
+    <!--    ALSO ADD THE FIRST android:name -->
     <application   
-        <!--    ADD THE BELOW -->
         android:name=".util.MyApp"
-        <!--    ADD THE ABOVE -->
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
