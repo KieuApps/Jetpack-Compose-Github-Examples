@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 
 @Composable
-fun IconButtonExamplesComposable() {
+fun IconButtonExamples() {
 	
 	// IconButton - Plain
 	IconButton(
@@ -18,6 +18,7 @@ fun IconButtonExamplesComposable() {
 	) {
 		Icon(Icons.Default.Add, "Add")
 	}
+	
 	
 	// IconButton - Custom Color
 	IconButton(
