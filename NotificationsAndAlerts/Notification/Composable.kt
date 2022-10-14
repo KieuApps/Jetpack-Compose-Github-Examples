@@ -15,7 +15,7 @@ import androidx.core.content.ContextCompat
 import com.DEVELOPER_NAME.APP_NAME.ExampleNotificationService
 
 @Composable
-fun NotificationExamplesComposable() {
+fun NotificationComposable() {
 	val context = LocalContext.current
 	val service = ExampleNotificationService(context)
 	
