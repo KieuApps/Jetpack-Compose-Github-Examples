@@ -15,13 +15,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ColumnExamplesComposable() {
+fun ColumnExamples() {
 	
 	// Column - Centered
 	Column(
 		modifier = Modifier
 			.fillMaxWidth()
-			.padding(vertical = 50.dp),
+			.height(150.dp),
 		verticalArrangement = Arrangement.Center,
 		horizontalAlignment = Alignment.CenterHorizontally
 	) {
@@ -34,7 +34,7 @@ fun ColumnExamplesComposable() {
 	Column(
 		modifier = Modifier
 			.fillMaxWidth()
-			.padding(vertical = 50.dp),
+			.height(150.dp),
 		verticalArrangement = Arrangement.Top,
 		horizontalAlignment = Alignment.Start
 	) {
@@ -47,7 +47,7 @@ fun ColumnExamplesComposable() {
 	Column(
 		modifier = Modifier
 			.fillMaxWidth()
-			.padding(vertical = 50.dp),
+			.height(150.dp),
 		verticalArrangement = Arrangement.Bottom,
 		horizontalAlignment = Alignment.End
 	) {
