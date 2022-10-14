@@ -3,7 +3,7 @@ import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 
 @Composable
-fun TextButtonExamplesComposable() {
+fun TextButtonExamples() {
 	TextButton(
 		onClick = { /* TODO */ }
 	) { 
