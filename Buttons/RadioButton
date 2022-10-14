@@ -12,10 +12,23 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
-fun RadioButtonExamplesComposable() {
-	Column(Modifier.fillMaxWidth()) {
-		val coffees = listOf("None", "Decaf", "Latte", "Mocha", "Americano")
-		val (selectedOption, onOptionSelected) = remember { mutableStateOf(coffees[0]) }
+fun RadioButtonExamples() {
+
+	Column(
+		modifier = Modifier
+			.fillMaxWidth()
+	) {
+	
+		val coffees = listOf(
+			"None", 
+			"Decaf", 
+			"Latte", 
+			"Mocha", 
+			"Americano"
+		)
+		val (selectedOption, onOptionSelected) = remember { 
+			mutableStateOf(coffees[0]) 
+		}
 		
 		coffees.forEach { option ->
 			Row(
