@@ -5,10 +5,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun SpacerExamplesComposable() {
+fun SpacerExamples() {
 	
 	// Divider - Plain
 	Divider()
+	
 	
 	// Divider - Custom
 	Divider(
