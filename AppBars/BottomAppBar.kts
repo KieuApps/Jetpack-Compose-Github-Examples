@@ -14,12 +14,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.graphics.vector.ImageVector
 
+data class Page(
+	val label: String,
+	val icon: ImageVector,
+)
+
 @Composable
-fun BottomAppBarExamplesComposable() {
-	data class Page(
-		val label: String,
-		val icon: ImageVector,
-	)
+fun BottomAppBarExamples() {
 	
 	var currentPage by rememberSaveable { mutableStateOf(1) }
 	val pages = listOf(
