@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import kotlinx.coroutines.launch
 
 @Composable
-fun SnackbarExamplesComposable() {
+fun SnackbarExamples() {
 	val scaffoldState = rememberScaffoldState()
 	val coroutineScope = rememberCoroutineScope()
 	
@@ -48,7 +48,7 @@ fun SnackbarExamplesComposable() {
 			},
 			modifier = Modifier.padding(padding)
 		) {
-			Text("Show Snackbar")
+			Text("Show Snackbar (with button)")
 		}
 	}
 }
