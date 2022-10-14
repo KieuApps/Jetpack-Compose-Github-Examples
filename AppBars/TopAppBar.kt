@@ -11,7 +11,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun TopAppBarExamplesComposable() {
+fun TopAppBarExamples() {
 	
 	// TopAppBar - Plain
 	TopAppBar(
