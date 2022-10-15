@@ -17,6 +17,17 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun ColumnExamples() {
 	
+	// Column - Top, Start
+	Column(
+		modifier = Modifier
+			.fillMaxWidth()
+			.height(150.dp)
+	) {
+		AnItem()
+		AnItem()
+		AnItem()
+	}
+	
 	// Column - Centered
 	Column(
 		modifier = Modifier
@@ -24,19 +35,6 @@ fun ColumnExamples() {
 			.height(150.dp),
 		verticalArrangement = Arrangement.Center,
 		horizontalAlignment = Alignment.CenterHorizontally
-	) {
-		AnItem()
-		AnItem()
-		AnItem()
-	}
-	
-	// Column - Top, Start
-	Column(
-		modifier = Modifier
-			.fillMaxWidth()
-			.height(150.dp),
-		verticalArrangement = Arrangement.Top,
-		horizontalAlignment = Alignment.Start
 	) {
 		AnItem()
 		AnItem()
@@ -56,15 +54,13 @@ fun ColumnExamples() {
 		AnItem()
 	}
 	
-	// Column - Centered, Background Color
+	// Column - Padding, Background Color
 	Column(
 		modifier = Modifier
 			.background(MaterialTheme.colors.surface)
 			.fillMaxWidth()
 			.padding(vertical = 20.dp)
-			.padding(5.dp),
-		verticalArrangement = Arrangement.Center,
-		horizontalAlignment = Alignment.CenterHorizontally
+			.padding(25.dp)
 	) {
 		AnItem()
 		AnItem()
