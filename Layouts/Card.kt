@@ -19,7 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun CardExamplesComposable() {
+fun CardExamples() {
 	
 	// Card - Plain
 	Box(Modifier.padding(8.dp)) {
@@ -30,12 +30,16 @@ fun CardExamplesComposable() {
 			Column(Modifier.padding(16.dp)) {
 				Text("Card Example")
 				Text(
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed " +
-						"do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+					"Lorem ipsum dolor sit amet, " +
+						"consectetur adipiscing " +
+						"elit, sed do eiusmod " +
+						"tempor incididunt ut labore " +
+						"et dolore magna aliqua."
 				)
 			}
 		}
 	}
+	
 	
 	// Card - Clickable
 	Box(Modifier.padding(8.dp)) {
@@ -48,17 +52,20 @@ fun CardExamplesComposable() {
 			Column(Modifier.padding(16.dp)) {
 				Text("Clickable Card")
 				Text(
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed " +
-						"do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+					"Lorem ipsum dolor sit amet, " +
+						"consectetur adipiscing " +
+						"elit, sed do eiusmod " +
+						"tempor incididunt ut labore " +
+						"et dolore magna aliqua."
 				)
 			}
 		}
 	}
 	
+	
 	// Card - Expandable
 	var expanded by rememberSaveable { mutableStateOf(false) }
-	val icon = Icons.Default.ArrowDropDown
-	
+				
 	Box(Modifier.padding(8.dp)) {
 		Card(
 			modifier = Modifier
@@ -68,13 +75,26 @@ fun CardExamplesComposable() {
 		) {
 			Column(modifier = Modifier.padding(16.dp)) {
 				Row {
-					Text("Expandable Card", Modifier.weight(1f))
-					Icon(icon, if(expanded) "Show less" else "Show more")
+					Text(
+						text = "Expandable Card", 
+						modifier = Modifier.weight(1f)
+					)
+					Icon(
+						imageVector = Icons.Default.ArrowDropDown,
+						contentDescription = if(expanded) {
+							"Show less"
+						} else {
+							"Show more"
+						}
+					)
 				}
 				AnimatedVisibility(expanded) {
 					Text(
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed " +
-							"do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+						"Lorem ipsum dolor sit amet, " +
+							"consectetur adipiscing " +
+							"elit, sed do eiusmod " +
+							"tempor incididunt ut labore " +
+							"et dolore magna aliqua."
 					)
 				}
 			}
