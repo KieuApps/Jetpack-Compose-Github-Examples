@@ -17,6 +17,18 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun RowExamples() {
 	
+	// Row - Top, Start
+	Row(
+		modifier = Modifier
+			.fillMaxWidth()
+			.height(150.dp)
+	) {
+		AnItem()
+		AnItem()
+		AnItem()
+	}
+	
+	
 	// Row - Centered
 	Row(
 		modifier = Modifier
@@ -30,18 +42,6 @@ fun RowExamples() {
 		AnItem()
 	}
 	
-	// Row - Top, Start
-	Row(
-		modifier = Modifier
-			.fillMaxWidth()
-			.height(150.dp),
-		horizontalArrangement = Arrangement.Start,
-		verticalAlignment = Alignment.Top
-	) {
-		AnItem()
-		AnItem()
-		AnItem()
-	}
 	
 	// Row - Bottom, End
 	Row(
@@ -56,15 +56,14 @@ fun RowExamples() {
 		AnItem()
 	}
 	
-	// Row - Centered, Background Color
+	
+	// Row - Padding, Background Color
 	Row(
 		modifier = Modifier
 			.background(MaterialTheme.colors.surface)
 			.fillMaxWidth()
 			.padding(vertical = 20.dp)
-			.padding(5.dp),
-		horizontalArrangement = Arrangement.Center,
-		verticalAlignment = Alignment.CenterVertically
+			.padding(25.dp)
 	) {
 		AnItem()
 		AnItem()
