@@ -9,7 +9,7 @@ import androidx.compose.ui.graphics.TileMode
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun GradientExamplesComposable() {
+fun GradientExamples() {
 	
 	// Vertical Gradient - Clamp
 	Canvas(
