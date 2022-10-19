@@ -32,7 +32,7 @@ fun TopAppBarExamples() {
 	TopAppBar(
 		title = {
 			Text(
-				"Title that's too long in some cases",
+				text = "Title that's too long in some cases",
 				maxLines = 1,
 				overflow = TextOverflow.Ellipsis
 			)
@@ -49,7 +49,22 @@ fun TopAppBarExamples() {
 			IconButton(onClick = { /* TODO */ }) {
 				Icon(Icons.Default.Settings, "Settings")
 			}
+		}
+	)
+	
+	
+	// TopAppBar - Custom Colors
+	TopAppBar(
+		title = { Text("My App") },
+		navigationIcon = {
+			IconButton(
+				onClick = { /* TODO */ }
+			) { 
+				Icon(Icons.Default.Menu, "Menu") 
+			}
 		},
+		backgroundColor = Color(0xFF728A57),
+		contentColor = Color(0xFFC6D6B3),
 		elevation = 8.dp
 	)
 }
