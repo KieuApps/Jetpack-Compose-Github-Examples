@@ -9,14 +9,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun CanvasExamplesComposable() {
+fun CanvasDrawExamples() {
 	
-	// Arc
 	Canvas(
 		modifier = Modifier
-			.fillMaxWidth()
-			.height(100.dp)
+			.fillMaxSize()
 	) {
+		val canvasWidth = size.width
+		val canvasHeight = size.height
+		
+		
+		// Arc
 		drawArc(
 			color = Color.Yellow,
 			startAngle = 30f,
@@ -25,29 +28,16 @@ fun CanvasExamplesComposable() {
 			topLeft = Offset(25.dp.toPx(), 50.dp.toPx()),
 			size = Size(50.dp.toPx(), 50.dp.toPx())
 		)
-	}
 	
-	// Circle
-	Canvas(
-		modifier = Modifier
-			.fillMaxWidth()
-			.height(100.dp)
-	) {
+	
+		// Circle
 		drawCircle(
 			color = Color.Green,
 			radius = 25.dp.toPx()
 		)
-	}
+
 	
-	// Line
-	Canvas(
-		modifier = Modifier
-			.fillMaxWidth()
-			.height(100.dp)
-	) {
-		val canvasWidth = size.width
-		val canvasHeight = size.height
-		
+		// Line
 		drawLine(
 			color = Color.Red,
 			strokeWidth = 2.dp.toPx(),
@@ -57,17 +47,9 @@ fun CanvasExamplesComposable() {
 				y = canvasHeight / 2
 			)
 		)
-	}
 	
-	// Oval
-	Canvas(
-		modifier = Modifier
-			.fillMaxWidth()
-			.height(100.dp)
-	) {
-		val canvasWidth = size.width
-		val canvasHeight = size.height
-		
+	
+		// Oval		
 		drawOval(
 			color = Color.DarkGray,
 			size = Size(
@@ -75,14 +57,9 @@ fun CanvasExamplesComposable() {
 				height = canvasHeight / 2
 			)
 		)
-	}
 	
-	// Rectangle
-	Canvas(
-		modifier = Modifier
-			.fillMaxWidth()
-			.height(100.dp)
-	) {
+	
+		// Rectangle
 		drawRect(
 			color = Color.Blue,
 			size = Size(150.dp.toPx(), 75.dp.toPx())
