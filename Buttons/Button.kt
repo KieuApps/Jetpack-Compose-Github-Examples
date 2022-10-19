@@ -44,8 +44,8 @@ fun ButtonExamples() {
 			width = 2.dp,
 			brush = Brush.verticalGradient(
 				listOf(
-					Color(0xFF9DCEF5),
-					Color(0xFF4596D6)
+					Color(0xFFA252FF),
+					Color(0xFF1E163F)
 				)
 			)
 		)
@@ -65,8 +65,8 @@ fun ButtonExamples() {
 			onClick = { /* TODO */ },
 			enabled = enabled.value,
 			colors = ButtonDefaults.buttonColors(
-				backgroundColor = Color(0xFF678B3D),
-				contentColor = Color(0xFFE3FFC2),
+				backgroundColor = Color(0xFFa6ffa1),
+				contentColor = Color(0xFF1A2211),
 				disabledBackgroundColor = Color(0xFF7A7A7A),
 				disabledContentColor = Color(0xFFBDBDBD)
 			)
