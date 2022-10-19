@@ -64,7 +64,7 @@ fun TopAppBarExamples() {
 			}
 		},
 		backgroundColor = Color(0xFF728A57),
-		contentColor = Color(0xFFC6D6B3),
+		contentColor = Color(0xFFE6F0DB),
 		elevation = 8.dp
 	)
 }
