@@ -10,38 +10,42 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
+data class Book(
+	val title: String,
+	val cover: Int = R.drawable.some_image,
+	val link: String = "",
+)
+
 @Composable
-fun LazyColumnExamplesComposable() {
-	
-	data class Book(
-		val title: String,
-		val cover: Int = R.drawable.some_image,
-		val link: String = "",
-	)
+fun LazyColumnExamples() {
 	
 	val books = listOf(
-		Book("Book\nOne"),
-		Book("Book\nTwo"),
-		Book("Book\nThree"),
-		Book("Book\nFour"),
+		Book("Book One"),
+		Book("Book Two"),
+		Book("Book Three"),
+		Book("Book Four"),
 	)
 	
 	// Lazy Column - Plain
 	LazyColumn(
 		modifier = Modifier.padding(8.dp),
-		horizontalAlignment = Alignment.CenterHorizontally
 	) {
-		
-		item { Text("Liked\nBooks") }
+		item { Text("Liked Books", style = MaterialTheme.typography.h5) }
 		
 		items(books) { book ->
-			Image(
-				painter = painterResource(book.cover),
-				contentDescription = book.title,
-				modifier = Modifier
-					.padding(8.dp)
-					.clickable { openLink(book.title) }
-			)
+			Row {
+				Image(
+					painter = painterResource(book.cover),
+					contentDescription = book.title,
+					modifier = Modifier
+						.padding(8.dp)
+						.clickable { openLink(book.title) }
+				)
+				Column(Modifier.fillMaxWidth().padding(16.dp)) {
+					Text(book.title, style = MaterialTheme.typography.h6)
+                        		Text("Some description...")
+				}
+			}
 		}
 	}
 }
