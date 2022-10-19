@@ -22,12 +22,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 
+data class Page(
+	val label: String,
+	val icon: ImageVector,
+)
+
 @Composable
-fun TabsExamplesComposable() {
-	data class Page(
-		val label: String,
-		val icon: ImageVector,
-	)
+fun LeadingIconTabExamples() {
 	
 	var currentPage by rememberSaveable { mutableStateOf(1) }
 	val pages = listOf(
@@ -36,10 +37,11 @@ fun TabsExamplesComposable() {
 		Page("Alert", Icons.Default.Notifications)
 	)
 	
+	
 	// LeadingIconTab - Plain
 	TabRow(
 		selectedTabIndex = currentPage,
-		modifier = Modifier.fillMaxWidth(0.9f)
+		modifier = Modifier.fillMaxWidth(0.85f)
 	) {
 		pages.forEachIndexed { index, page ->
 			LeadingIconTab(
@@ -52,10 +54,11 @@ fun TabsExamplesComposable() {
 		}
 	}
 	
+	
 	// LeadingIconTab - Custom Color
 	TabRow(
 		selectedTabIndex = currentPage,
-		modifier = Modifier.fillMaxWidth(0.9f)
+		modifier = Modifier.fillMaxWidth(0.85f)
 	) {
 		pages.forEachIndexed { index, page ->
 			LeadingIconTab(
@@ -64,16 +67,17 @@ fun TabsExamplesComposable() {
 				text = { Text(page.label) },
 				icon = { Icon(page.icon, page.label) },
 				modifier = Modifier.padding(top = 8.dp),
-				selectedContentColor = Color(0xFFB554C5),
-				unselectedContentColor = Color(0xFFB554C5).copy(0.6f)
+				selectedContentColor = Color(0xFF7C3988),
+				unselectedContentColor = Color(0xFF7C3988).copy(0.72f)
 			)
 		}
 	}
 	
+	
 	// LeadingIconTab - Custom Shape
 	TabRow(
 		selectedTabIndex = currentPage,
-		modifier = Modifier.fillMaxWidth(0.9f)
+		modifier = Modifier.fillMaxWidth(0.85f)
 	) {
 		pages.forEachIndexed { index, page ->
 			LeadingIconTab(
