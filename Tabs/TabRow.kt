@@ -16,18 +16,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 
+data class Page(
+	val label: String,
+	val icon: ImageVector,
+)
+
 @Composable
-fun TabsExamplesComposable() {
-	data class Page(
-		val label: String,
-		val icon: ImageVector,
-	)
+fun TabRowExamples() {
 	
 	var currentPage by rememberSaveable { mutableStateOf(1) }
 	val pages = listOf(
 		Page("Home", Icons.Default.Home),
 		Page("Alert", Icons.Default.Notifications)
 	)
+	
 	
 	// TabRow - Tab, Icon Only
 	TabRow(
@@ -42,6 +44,7 @@ fun TabsExamplesComposable() {
 			)
 		}
 	}
+	
 	
 	// TabRow - LeadingIconTab - Plain
 	TabRow(
@@ -58,6 +61,7 @@ fun TabsExamplesComposable() {
 		}
 	}
 	
+	
 	// TabRow - Tab, Text Only
 	TabRow(
 		selectedTabIndex = currentPage
@@ -71,6 +75,7 @@ fun TabsExamplesComposable() {
 			)
 		}
 	}
+	
 	
 	// TabRow - Tab, Plain
 	TabRow(
