@@ -8,7 +8,7 @@ import androidx.compose.ui.graphics.drawscope.withTransform
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun CanvasExamplesComposable() {
+fun CanvasTransformExamples() {
 	
 	// Transform
 	Canvas(
