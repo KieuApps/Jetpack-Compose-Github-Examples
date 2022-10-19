@@ -9,7 +9,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun CanvasInABoxExampleComposable() {
+fun CanvasExamples() {
 	
 	// Canvas - Plain
 	Canvas(
@@ -18,6 +18,7 @@ fun CanvasInABoxExampleComposable() {
 			.height(100.dp)
 	) {
 		val canvasHeight = size.height
+		
 		drawCircle(
 			color = Color.Green,
 			radius = canvasHeight / 2
@@ -34,6 +35,10 @@ fun CanvasInABoxExampleComposable() {
 				val canvasHeight = size.height
 				
 				/* Your Canvas code... */
+				drawCircle(
+                                	color = Color.Green,
+                                	radius = canvasHeight / 2
+                            	)
 				
 			}
 	) {
