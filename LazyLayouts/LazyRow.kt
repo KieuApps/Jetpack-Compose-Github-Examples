@@ -10,14 +10,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
+data class Movie(
+	val title: String,
+	val cover: Int = R.drawable.some_image,
+	val link: String = ""
+)
+
 @Composable
-fun LazyRowExamplesComposable() {
-	
-	data class Movie(
-		val title: String,
-		val cover: Int = R.drawable.some_image,
-		val link: String = ""
-	)
+fun LazyRowExamples() {
 	
 	val movies = listOf(
 		Movie("Movie\nOne"),
@@ -34,7 +34,6 @@ fun LazyRowExamplesComposable() {
 		modifier = Modifier.padding(8.dp),
 		verticalAlignment = Alignment.CenterVertically
 	) {
-		
 		item { Text("Liked\nMovies") }
 		
 		items(movies) { movie ->
