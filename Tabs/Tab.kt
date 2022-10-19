@@ -21,12 +21,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 
+data class Page(
+	val label: String,
+	val icon: ImageVector,
+)
+
 @Composable
-fun TabsExamplesComposable() {
-	data class Page(
-		val label: String,
-		val icon: ImageVector,
-	)
+fun TabExamples() {
 	
 	var currentPage by rememberSaveable { mutableStateOf(1) }
 	val pages = listOf(
@@ -38,7 +39,6 @@ fun TabsExamplesComposable() {
 	// Tab - Plain
 	TabRow(
 		selectedTabIndex = currentPage,
-		modifier = Modifier.fillMaxWidth(0.9f)
 	) {
 		pages.forEachIndexed { index, page ->
 			Tab(
@@ -53,7 +53,6 @@ fun TabsExamplesComposable() {
 	// Tab - Custom Color
 	TabRow(
 		selectedTabIndex = currentPage,
-		modifier = Modifier.fillMaxWidth(0.9f)
 	) {
 		pages.forEachIndexed { index, page ->
 			Tab(
@@ -61,8 +60,8 @@ fun TabsExamplesComposable() {
 				onClick = { currentPage = index },
 				icon = { Icon(page.icon, page.label) },
 				modifier = Modifier.padding(top = 8.dp),
-				selectedContentColor = Color(0xFFB554C5),
-				unselectedContentColor = Color(0xFFB554C5).copy(alpha = 0.6f)
+				selectedContentColor = Color(0xFF7C3988),
+				unselectedContentColor = Color(0xFF7C3988).copy(alpha = 0.6f)
 			)
 		}
 	}
@@ -70,7 +69,6 @@ fun TabsExamplesComposable() {
 	// Tab - Custom Shape
 	TabRow(
 		selectedTabIndex = currentPage,
-		modifier = Modifier.fillMaxWidth(0.9f)
 	) {
 		pages.forEachIndexed { index, page ->
 			Tab(
