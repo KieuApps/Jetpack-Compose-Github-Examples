@@ -13,23 +13,12 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun RadioButtonExamples() {
-
-	Column(
-		modifier = Modifier
-			.fillMaxWidth()
-	) {
+	val coffees = listOf("None", "Decaf", "Latte", "Mocha", "Americano")
+	val (selectedOption, onOptionSelected) = remember { mutableStateOf(coffees[0]) }
 	
-		val coffees = listOf(
-			"None", 
-			"Decaf", 
-			"Latte", 
-			"Mocha", 
-			"Americano"
-		)
-		val (selectedOption, onOptionSelected) = remember { 
-			mutableStateOf(coffees[0]) 
-		}
-		
+
+	// RadioButtons
+	Column(modifier = Modifier.fillMaxWidth()) {
 		coffees.forEach { option ->
 			Row(
 				modifier = Modifier
