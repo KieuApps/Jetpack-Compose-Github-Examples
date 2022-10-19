@@ -19,10 +19,7 @@ import androidx.compose.ui.graphics.Color
 fun IconToggleButtonExamples() {
 	
 	var checked by rememberSaveable { mutableStateOf(false) }
-	val likeIcon =
-		if(checked) Icons.Filled.ThumbUp
-		else Icons.Outlined.ThumbUp
-	
+	val likeIcon = if(checked) Icons.Filled.ThumbUp else Icons.Outlined.ThumbUp
 	
 	// IconToggleButton - Plain
 	IconToggleButton(
