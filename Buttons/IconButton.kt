@@ -32,4 +32,21 @@ fun IconButtonExamples() {
 			contentDescription = "Add"
 		)
 	}
+	
+	
+	// IconButton - BorderStroke
+	IconButton(
+		onClick = { },
+		modifier = Modifier
+			.clip(CircleShape)
+			.border(
+				border = BorderStroke(2.dp, Color.White),
+				shape = CircleShape
+			)
+	) {
+		Icon(
+			imageVector = Icons.Default.Add,
+			contentDescription = "Add"
+		)
+	}
 }
