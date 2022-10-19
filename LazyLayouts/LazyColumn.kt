@@ -41,8 +41,15 @@ fun LazyColumnExamples() {
 						.padding(8.dp)
 						.clickable { openLink(book.title) }
 				)
-				Column(Modifier.fillMaxWidth().padding(16.dp)) {
-					Text(book.title, style = MaterialTheme.typography.h6)
+				Column(
+					modifier = Modifier
+						.fillMaxWidth()
+						.padding(16.dp)
+				) {
+					Text(
+						text = book.title, 
+						style = MaterialTheme.typography.h6
+					)
                         		Text("Some description...")
 				}
 			}
