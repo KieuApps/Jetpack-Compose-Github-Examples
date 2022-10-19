@@ -21,14 +21,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 
+data class Page(
+	val label: String,
+	val icon: ImageVector,
+)
+
 @Composable
-fun TabsExamplesComposable() {
-	data class Page(
-		val label: String,
-		val icon: ImageVector,
-	)
+fun ScrollableTabRowExamples() {
 	
-	var currentPage by rememberSaveable { mutableStateOf(1) }
+	var currentPage by rememberSaveable { mutableStateOf(0) }
 	val pages = listOf(
 		Page("Acct", Icons.Default.AccountCircle),
 		Page("Home", Icons.Default.Home),
