@@ -17,7 +17,7 @@ fun BuildAnnotatedStringExamples() {
 		text = buildAnnotatedString {
 			withStyle(
 				style = SpanStyle(
-					color = Color(0xFF78788F),
+					color = Color(0xFF9A50A7),
 					fontWeight = FontWeight.Bold,
 					fontStyle = FontStyle.Italic
 				)
@@ -27,7 +27,7 @@ fun BuildAnnotatedStringExamples() {
 			append("ello ")
 			withStyle(
 				style = SpanStyle(
-					color = Color(0xFF78788F),
+					color = Color(0xFF9A50A7),
 					fontWeight = FontWeight.Bold,
 					fontStyle = FontStyle.Italic,
 					letterSpacing = 12.sp
