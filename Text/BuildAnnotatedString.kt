@@ -10,14 +10,14 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun TextExamplesComposable() {
+fun BuildAnnotatedStringExamples() {
 	
 	// BuildAnnotatedString
 	Text(
 		text = buildAnnotatedString {
 			withStyle(
 				style = SpanStyle(
-					color = Color(0xFF9C27B0),
+					color = Color(0xFF78788F),
 					fontWeight = FontWeight.Bold,
 					fontStyle = FontStyle.Italic
 				)
@@ -27,7 +27,7 @@ fun TextExamplesComposable() {
 			append("ello ")
 			withStyle(
 				style = SpanStyle(
-					color = Color(0xFF9C27B0),
+					color = Color(0xFF78788F),
 					fontWeight = FontWeight.Bold,
 					fontStyle = FontStyle.Italic,
 					letterSpacing = 12.sp
