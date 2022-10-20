@@ -4,10 +4,26 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 
 @Composable
-fun ComponentExamplesComposable() {
+fun CheckboxExamples() {
+
 	val isChecked = rememberSaveable { mutableStateOf(false) }
+	
+	
+	// Checkbox - Plain
 	Checkbox(
 		checked = isChecked.value,
 		onCheckedChange = { isChecked.value = it }
+	)
+	
+	
+	// Checkbox - Custom colors
+	Checkbox(
+		checked = isChecked.value,
+		onCheckedChange = { isChecked.value = it },
+		colors = CheckboxDefaults.colors(
+			checkedColor = Color(0xFFF3D375),
+			uncheckedColor = Color(0xFFF3D375),
+			checkmarkColor = Color(0xFF292012)
+		)
 	)
 }
