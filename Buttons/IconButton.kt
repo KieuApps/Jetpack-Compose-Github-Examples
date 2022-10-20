@@ -40,7 +40,7 @@ fun IconButtonExamples() {
 		modifier = Modifier
 			.clip(CircleShape)
 			.border(
-				border = BorderStroke(2.dp, Color.White),
+				border = BorderStroke(2.dp, MaterialTheme.colors.onSurface),
 				shape = CircleShape
 			)
 	) {
